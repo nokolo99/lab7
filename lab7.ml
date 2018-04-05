@@ -376,9 +376,10 @@ object(this)
   inherit rect p s s as super
 
   method! scale (k : float) : unit =
-   let (a,b) = super#center in super#scale k
+   let (a,b) = super#center in 
+   super#scale k ;
    let (a2, b2) = super#center in
-   super#translate (a2 -. a, b2 -.b)
+   super#translate (a -. a2, b -.b2)
 
 end ;;
      
