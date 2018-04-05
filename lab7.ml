@@ -60,7 +60,7 @@ let area_adt (s : shape_adt) : float =
   match s with
   | Square (p, x) -> x *. x
   | Rect (p, x, y) -> x *. y
-  | Circle (p, x) -> Math.pi * 2 * x;;
+  | Circle (p, x) -> 3.14159 * 2 * x;;
 
 (*....................................................................
 Exercise 1B: Write a function that, given a list of elements of type
@@ -230,7 +230,7 @@ object
   val mutable radius = r
 
   method area : float =
-    Math.pi *. (radius ** 2.)
+     3.14159 *. (radius ** 2.)
 
   method bounding_box : point * point =
     let (a,b) = center in
