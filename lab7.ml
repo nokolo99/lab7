@@ -234,7 +234,7 @@ object
 
   method bounding_box : point * point =
     let (a,b) = center in
-    let p1 = (a -. r, b. -. r) in
+    let p1 = (a -. r, b -. r) in
     let p2 = (a +. r, b +. r) in
     (p1, p2)
 
