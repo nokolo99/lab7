@@ -198,7 +198,7 @@ object (this)
 
   method bounding_box : point * point =
     let (a,b) = pos in
-      let p2 = (a +. w, b +. h)) in
+      let p2 = (a +. w, b +. h) in
       (p, p2)
 
   method center : point =
