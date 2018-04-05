@@ -482,7 +482,7 @@ in a variable "a".
    
 
 let sq : quad =
-  square_quad (0., 0.) (5.) ;;
+  new square_quad (0., 0.) (5.) ;;
 
 let a = sq#area ;;
 
