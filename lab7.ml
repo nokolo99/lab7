@@ -272,7 +272,7 @@ object(this)
     (pos, pos2)
 
   method center : point =
-    let (a,b) = pos in (a +. (s /. 2), b +. (s /. 2))
+    let (a,b) = pos in (a +. (s /. 2.), b +. (s /. 2.))
 
   (* Move the square by the values tx and ty. *)
   method translate ((tx, ty) : point) : unit =
