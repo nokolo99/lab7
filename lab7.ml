@@ -198,16 +198,16 @@ object (this)
 
   method bounding_box : point * point =
     let (a,b) = pos in
-      let p2 = (a +. w, b +. h) in
+      let p2 = (a +. width, b +. height) in
       (p, p2)
 
   method center : point =
-    let (a,b) = pos in (a +. (w /. 2.), b +. (h /. 2.))
+    let (a,b) = pos in (a +. (width /. 2.), b +. (heighr /. 2.))
 
   (* Destructively update pos to translate the shape by the values
      given in t. *)
   method translate (t : point) : unit =
-    let (a1, b1) = p in
+    let (a1, b1) = pos in
     let (a2, b2) = t in
     pos <- (a1 +. a2, b1 +. b2); ()
 
