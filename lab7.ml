@@ -60,7 +60,7 @@ let area_adt (s : shape_adt) : float =
   match s with
   | Square (p, x) -> x *. x
   | Rect (p, x, y) -> x *. y
-  | Circle (p, x) -> 3.14159 * 2 * x;;
+  | Circle (p, x) -> 3.14159 * 2. * x;;
 
 (*....................................................................
 Exercise 1B: Write a function that, given a list of elements of type
@@ -373,14 +373,13 @@ position.
 
 class square_center_scale (p: point) (s: float) : shape = 
 object(this)
-  inherit square_rect p s
+  inherit rect p s s as super
 
   method! scale (k : float) : unit =
-   let (a,b) = super#center in
-   side <- side +.k;
-   let (a2, b2) = pos in
-   let (c,d) = (s2 -. a, b2 -. b) in
-   pos <- (a +. c *. k, b +. d *. k)
+   let (a,b) = super#center in super#scale k
+   let (a2, b2) = super#center in
+   super#translate (a2 -. a, b2 -.b)
+
 end ;;
      
 (* Before we move on, consider: do you need to make any modifications
