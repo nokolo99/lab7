@@ -202,7 +202,7 @@ object (this)
       (p, p2)
 
   method center : point =
-    let (a,b) = pos in (a +. (width /. 2.), b +. (heighr /. 2.))
+    let (a,b) = pos in (a +. (width /. 2.), b +. (height /. 2.))
 
   (* Destructively update pos to translate the shape by the values
      given in t. *)
